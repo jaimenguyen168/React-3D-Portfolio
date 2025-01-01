@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import {navLinks} from "../constants/index.js";
 
-const NavItems = () => {
+const NavItems = ({ onClick = () => {} }) => {
     return (
         <ul className="nav-ul">
             {navLinks.map(({id, href, name}) => (
                 <li key={id} className="nav-li">
-                    <a href={href} className="nav-li_a" onClick={() => {}}>
+                    <a href={href} className="nav-li_a" onClick={onClick}>
                         {name}
                     </a>
                 </li>
